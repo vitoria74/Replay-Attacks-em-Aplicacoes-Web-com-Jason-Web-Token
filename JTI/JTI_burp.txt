@@ -1,0 +1,21 @@
+app_mitigadoJTI.js:
+
+POST /login HTTP/1.1
+Host: 127.0.0.1:3001
+Content-Type: application/json
+Content-Length: 46
+
+{"username": "vitoria", "password": "123456"}
+
+-------------------------------------------------------
+
+log_app_mitigado.js:
+
+POST /transferir HTTP/1.1
+Host: 127.0.0.1:3001
+Authorization: Bearer COLE_O_TOKEN_GERADO
+Content-Type: application/json
+
+{
+    "valor": 100
+}
