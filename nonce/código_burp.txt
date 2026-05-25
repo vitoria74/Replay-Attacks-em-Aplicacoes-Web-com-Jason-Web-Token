@@ -1,0 +1,34 @@
+se o get não funcionar, add dois enters para dar espaço
+
+------------------------------------------------------------
+
+token_nonce:
+
+POST /login HTTP/1.1
+Host: 127.0.0.1:3003
+Content-Type: application/json
+Content-Length: 45
+
+{"username": "vitoria", "password": "123456"}
+
+-------------------------------------------------------------
+
+get_nonce:
+
+GET /get-nonce HTTP/1.1
+Host: 127.0.0.1:3003
+
+--------------------------------------------------------
+
+log_nonce:
+
+POST /transferir HTTP/1.1
+Host: 127.0.0.1:3003
+Authorization: Bearer colar token aqui
+Content-Type: application/json
+Content-Length: 58
+
+{
+    "nonce": "colar nonce aqui",
+    "valor": 100
+}
