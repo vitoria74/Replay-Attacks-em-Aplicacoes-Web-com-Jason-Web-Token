@@ -7,7 +7,7 @@ Este repositório está organizado em pastas individuais para cada estratégia d
 ### ⚠️ Nota Importante sobre os Tokens (Execução dos Testes)
 
 * **Nonce e Refresh:** Não exigem nenhuma configuração prévia. Os próprios scripts do `k6` realizam o fluxo de autenticação automática ou geram os tokens matematicamente em tempo de execução.
-* **Sem Mitigação, JTI e exp reduzido:** Você deve utilizar o **Burp Suite** (ou OWASP ZAP) para interceptar uma requisição legítima, copiar a string do JWT gerado e colá-la na variável `TOKEN` dentro do respectivo arquivo de script do `k6` antes de disparar o comando `k6 run`.
+* **Sem Mitigação, JTI e exp reduzido:** Você deve utilizar o **Burp Suite Community Edition** para capturar um token válido. Copie a string do JWT gerado e cole-a na variável `TOKEN` dentro do respectivo arquivo de script de teste (no caso do cenário Sem Mitigação, insira a string diretamente no campo `Authorization` dos cabeçalhos) antes de disparar o comando `k6 run`.
 
 ## 📋 Pré-requisitos
 
