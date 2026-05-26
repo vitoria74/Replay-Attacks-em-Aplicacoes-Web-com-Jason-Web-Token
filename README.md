@@ -4,6 +4,11 @@
 
 Este repositório está organizado em pastas individuais para cada estratégia de mitigação avaliada contra Replay Attacks. Para executar os servidores e rodar os testes de carga, siga os passos abaixo.
 
+### ⚠️ Nota Importante sobre os Tokens (Execução dos Testes)
+
+* **Nonce e Refresh:** Não exigem nenhuma configuração prévia. Os próprios scripts do `k6` realizam o fluxo de autenticação automática ou geram os tokens matematicamente em tempo de execução.
+* **Sem Mitigação, JTI e exp reduzido:** Você deve utilizar o **Burp Suite** (ou OWASP ZAP) para interceptar uma requisição legítima, copiar a string do JWT gerado e colá-la na variável `TOKEN` dentro do respectivo arquivo de script do `k6` antes de disparar o comando `k6 run`.
+
 ## 📋 Pré-requisitos
 
 Antes de iniciar, certifique-se de ter instalado em sua máquina:
